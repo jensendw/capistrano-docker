@@ -63,7 +63,7 @@ fi
               logger.info "Created docker shell at #{docker_shell}"
               run "chmod +x #{docker_shell}", shell: 'bash -l'
             end
-            run "docker tag #{docker_repository} #{docker_repository} capistrano", shell: 'bash -l'
+            run "docker tag #{docker_repository} capistrano", shell: 'bash -l'
           end
 
           task :tag_deployment do
